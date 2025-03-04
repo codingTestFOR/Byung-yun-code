@@ -4,12 +4,12 @@ data_1 = "02984"
 data_2 = "567"
 
 def calculate(data):
-    numbers = [int(n) for n in data]
+    numbers = [int(n) for n in data]  # [0, 2, 9, 8, 4]
 
     result = numbers[0]
 
     for number in range(1, len(numbers)):  # range(1, len(numbers)) == [2, 9, 8, 4]
-        if number == 0 or result == 0:
+        if numbers[number] == 0 or result == 0:
             result += numbers[number]
         else:
             result *= numbers[number]
