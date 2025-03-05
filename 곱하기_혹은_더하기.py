@@ -9,13 +9,13 @@ def calculate(data):
     result = numbers[0]
 
     for number in range(1, len(numbers)):  # range(1, len(numbers)) == [2, 9, 8, 4]
-        if numbers[number] == 0 or result == 0:
+        if numbers[number] <= 1 or result <= 1:
             result += numbers[number]
         else:
             result *= numbers[number]
 
     return result
-
+\
 answer_1 = calculate(data_1)
 print("출력 예시 1 : %d" % answer_1)  # 576
 
