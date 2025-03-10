@@ -1,6 +1,6 @@
 """
 n = 2
-strings = ["AAA", "AAA"]
+strings = ['GCF", "ACDEB"]
 """
 
 # 입력
