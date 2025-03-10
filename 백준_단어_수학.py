@@ -1,4 +1,7 @@
 """
+문제 번호: 1339
+
+예제 입력
 n = 2
 strings = ['GCF", "ACDEB"]
 """
@@ -12,7 +15,7 @@ for i in range(n):  # GCF, ACDEB
 # 1. 가중치 설정
 weights = {}  # 알파뱃과 가중치를 넣을 딕셔너리
 for string in strings:
-    char_list = list(string)  # reverse 함술르 사용하기 위해서
+    char_list = list(string)  # reverse 함수를 사용하기 위해서
     char_list.reverse()  # FCG, BEDCA
     weight = 1
 
