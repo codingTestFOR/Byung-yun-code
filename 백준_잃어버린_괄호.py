@@ -5,14 +5,10 @@
 
 00000-00000, 0
 
-10+10+10+10-10
+10+10+10+10-10, 30
 
-가장 처음과 마지막은 숫자, 처음 마이너스값이 나오는 경우는 없음
-최소화 시키기 위해선 (-)를 다음 (-)가 나오기 전까지 괄호로 묶는다.
-1. ●+●+●+●+●...
-2. ●-(●+●)-(●+●)
-4. ●+●-(●+●)-●
-3. ●-●-●-●-
+처음에 음수는 나오지 않음
+풀이 아이디어: 처음 나온 '-' 이후 모든 값을 더하고 처음 양수에서 뺀다.
 """
 
 data = input()
@@ -25,10 +21,10 @@ result = 0
 split_data = data.split("-")
 is_only_plus = True if len(split_data) <= 1 else False
 # print(split_data)
-if is_only_plus:  # 마이너스 없음
+if is_only_plus:  # 마이너스 없는 경우
     numbers = list(map(int, split_data[0].split("+")))
     result = sum(numbers)
-else:  # 마이너스가 하나라도 존재함
+else:  # 마이너스가 하나라도 존재하는 경우
     idx = data.find("-")
 
     first = data[:idx].split('+')
