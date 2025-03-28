@@ -46,7 +46,7 @@ while True:
         count += 1  # 총 밟은 타일 추가
         turn_count = 0  # 돈거 초기화
         continue
-    else:  # 어라 한 번 더 돌아야지
+    else:  # 이동할 수 없다면 돌기
         turn_count += 1
     if turn_count >= 4:  # 뒤로 한 칸
         new_a = a - da[direction]
@@ -54,7 +54,7 @@ while True:
         if area[new_a][new_b] == 0:  # 땅인가?
             a = new_a
             b = new_b
-        else:  # 으악 바다에 빠짐
+        else:  # 바다에 빠져버림
             break
         turn_count = 0
 
