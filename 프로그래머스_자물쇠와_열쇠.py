@@ -22,6 +22,16 @@ def solution(key, lock):
     # 비교하기 쉬운 자물쇠 만들기
     final_lock = invert_matrix(lock)
 
+    # 열쇠 크기 자물쇠와 맞게 조정
+    if len(key) < len(lock):
+        delta = len(lock) - len(key)
+        for r in key:
+            r += [0] * delta
+        key += [[0] * len(lock)] * delta
+
+    # print(key)
+
+
     x_offset_min  = - len(key) + 1
     x_offset_max = len(lock) - 1
 
@@ -72,8 +82,8 @@ def solution(key, lock):
                 final_key.insert(0, [0] * len(key))
                 final_key.pop()
 
-        print('x: ', x_offset, '. y:', y_offset, '. turn: ', turn_count)
-        print('final:', final_key)
+        # print('x: ', x_offset, '. y:', y_offset, '. turn: ', turn_count)
+        # print('final:', final_key)
 
         # 맞는지 확인
         if final_key == final_lock:
@@ -93,7 +103,7 @@ def solution(key, lock):
     return answer
 
 
-print(solution([[0, 0, 0], [1, 0, 0], [0, 1, 1]], [[1, 1, 1], [1, 1, 0], [1, 0, 1]]))
+print(solution([[1, 0], [0, 1]], [[1, 1, 1], [1, 1, 0], [1, 0, 1]]))
 
 """
 KEY
