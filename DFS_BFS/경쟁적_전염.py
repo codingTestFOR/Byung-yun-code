@@ -3,7 +3,7 @@ from collections import deque
 
 """
 
-# 테스트 케이스
+테스트 케이스
 
 N = 3
 K = 3
