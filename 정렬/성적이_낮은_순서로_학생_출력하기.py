@@ -8,7 +8,6 @@ student_list = []
 
 # 입력
 N = int(input())
-numbers = []
 for i in range(N):
     a, b = input().split()
     s = Student(a, b)
